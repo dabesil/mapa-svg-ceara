@@ -22,12 +22,13 @@ export default function citiesScript(){
     }
 
     async function getCityInfo(index){
-        const rawData = await fetch('https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/2020/variaveis/9324?localidades=N6[N3[23]]')
+        /* const rawData = await fetch('https://servicodados.ibge.gov.br/api/v3/agregados/6579/periodos/2020/variaveis/9324?localidades=N6[N3[23]]')
         .then(response => response.json())
         const city = (await rawData[0].resultados[0].series[index].localidade.nome).replace(' - CE', '')
         const population = await rawData[0].resultados[0].series[index].serie[2020]
         cidade.innerHTML = city
-        populacao.innerHTML = 'População: ' + population
+        populacao.innerHTML = 'População: ' + population */
+        cidade.innerHTML = cidades[index].id
     }
 }
 
